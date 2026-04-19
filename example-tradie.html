@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Melbourne Plumbing Pros — Licensed Plumbers</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg:#14100a; --card:#1c1811; --border:#3a2d1e;
+  --orange:#ea6c0a; --orange-light:#f97316; --blue:#3b82f6;
+  --text:#f1f5f9; --muted:#7a8fa8; --radius:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Raleway',sans-serif;font-size:16px;line-height:1.6;}
+
+.demo-banner{background:linear-gradient(135deg,rgba(234,108,10,0.15),rgba(249,115,22,0.15));border-bottom:2px solid var(--orange);padding:12px 6%;text-align:center;font-size:0.85rem;font-weight:700;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);}
+.demo-banner a{color:var(--orange-light);text-decoration:none;margin-left:12px;transition:opacity 0.2s;}
+.demo-banner a:hover{opacity:0.8;}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 6%;background:rgba(20,16,10,0.95);backdrop-filter:blur(10px);position:sticky;top:40px;z-index:50;border-bottom:1px solid var(--border);}
+.logo{font-size:1.5rem;font-weight:900;color:var(--orange-light);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 6%;background:linear-gradient(135deg,rgba(234,108,10,0.08),rgba(20,16,10,0.9)),url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.03">🔧</text></svg>') center/200px;}
+.hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;margin-bottom:20px;color:var(--text);}
+.hero .tagline{font-size:1.2rem;color:var(--orange-light);font-weight:700;margin-bottom:12px;letter-spacing:1px;}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:550px;margin-bottom:32px;}
+.btn{background:var(--orange);color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:800;display:inline-block;transition:background 0.2s,transform 0.2s;}
+.btn:hover{background:var(--orange-light);transform:translateY(-2px);}
+
+section{padding:80px 6%;}
+.sec-inner{max-width:1000px;margin:0 auto;}
+h2{font-size:2.5rem;font-weight:900;margin-bottom:16px;text-align:center;color:var(--orange-light);}
+.section-sub{text-align:center;color:var(--muted);margin-bottom:52px;font-size:1.05rem;}
+
+.trust-badges{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin:40px 0;}
+.badge{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 24px;text-align:center;min-width:140px;}
+.badge .icon{font-size:2rem;margin-bottom:8px;}
+.badge .label{font-size:0.85rem;color:var(--muted);font-weight:600;}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.service-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:transform 0.3s;}
+.service-item:hover{transform:translateY(-4px);}
+.service-item h3{font-size:1.3rem;font-weight:800;margin-bottom:12px;color:var(--orange-light);}
+.service-item ul{list-style:none;color:var(--muted);font-size:0.9rem;line-height:2;}
+.service-item ul li::before{content:'✓';color:var(--orange);margin-right:8px;font-weight:700;}
+
+.coverage-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;text-align:center;}
+.coverage-box h3{font-size:1.8rem;font-weight:800;margin-bottom:16px;color:var(--orange-light);}
+.coverage-box p{color:var(--muted);margin-bottom:24px;line-height:1.7;}
+.suburbs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.suburb{background:rgba(234,108,10,0.1);border:1px solid rgba(234,108,10,0.3);padding:8px 16px;border-radius:50px;font-size:0.85rem;font-weight:600;color:var(--text);}
+
+.contact-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;max-width:600px;margin:0 auto;text-align:center;}
+.contact-box h2{margin-bottom:20px;}
+.contact-box p{color:var(--muted);margin-bottom:28px;line-height:1.7;}
+.contact-info{display:flex;flex-direction:column;gap:12px;align-items:center;margin-bottom:32px;}
+.contact-info a{color:var(--orange-light);text-decoration:none;font-weight:700;font-size:1.1rem;}
+
+footer{background:var(--card);border-top:1px solid var(--border);padding:32px 6%;text-align:center;color:var(--muted);font-size:0.9rem;}
+
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .services-grid{grid-template-columns:1fr;}
+  .trust-badges{flex-direction:column;align-items:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  ✨ This is a demo website — <a href="index.html">← Back to LaunchLocal</a>
+</div>
+
+<nav>
+  <div class="logo">Melbourne Plumbing Pros</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#coverage">Coverage</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="tagline">Licensed & Insured</div>
+  <h1>🔧 Melbourne Plumbing Pros</h1>
+  <p>Fast, reliable plumbing services across Melbourne. Available 24/7 for emergencies.</p>
+  <a href="#contact" class="btn">Get a Free Quote</a>
+</section>
+
+<section>
+  <div class="sec-inner">
+    <div class="trust-badges">
+      <div class="badge">
+        <div class="icon">✓</div>
+        <div class="label">Fully Licensed</div>
+      </div>
+      <div class="badge">
+        <div class="icon">🛡️</div>
+        <div class="label">Insured</div>
+      </div>
+      <div class="badge">
+        <div class="icon">⏰</div>
+        <div class="label">24/7 Emergency</div>
+      </div>
+      <div class="badge">
+        <div class="icon">⭐</div>
+        <div class="label">5-Star Rated</div>
+      </div>
+      <div class="badge">
+        <div class="icon">💯</div>
+        <div class="label">Satisfaction Guaranteed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="sec-inner">
+    <h2>Our Services</h2>
+    <p class="section-sub">Professional plumbing for residential and commercial properties.</p>
+    
+    <div class="services-grid">
+      <div class="service-item">
+        <h3>General Plumbing</h3>
+        <ul>
+          <li>Leaking taps and pipes</li>
+          <li>Toilet repairs</li>
+          <li>Blocked drains</li>
+          <li>Hot water systems</li>
+        </ul>
+      </div>
+      
+      <div class="service-item">
+        <h3>Emergency Plumbing</h3>
+        <ul>
+          <li>Burst pipes</li>
+          <li>Gas leaks</li>
+          <li>Sewer backups</li>
+          <li>Available 24/7</li>
+        </ul>
+      </div>
+      
+      <div class="service-item">
+        <h3>Renovations & Installations</h3>
+        <ul>
+          <li>Bathroom renovations</li>
+          <li>Kitchen plumbing</li>
+          <li>New installations</li>
+          <li>Commercial fit-outs</li>
+        </ul>
+      </div>
+      
+      <div class="service-item">
+        <h3>Maintenance</h3>
+        <ul>
+          <li>Annual inspections</li>
+          <li>Preventative maintenance</li>
+          <li>Hot water servicing</li>
+          <li>Gas compliance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coverage">
+  <div class="sec-inner">
+    <h2>Service Areas</h2>
+    <p class="section-sub">Proudly servicing all Melbourne metro suburbs.</p>
+    
+    <div class="coverage-box">
+      <h3>We Service All Melbourne</h3>
+      <p>From the CBD to the outer suburbs, we're your local plumbing experts.</p>
+      
+      <div class="suburbs">
+        <span class="suburb">Richmond</span>
+        <span class="suburb">Brunswick</span>
+        <span class="suburb">Fitzroy</span>
+        <span class="suburb">St Kilda</span>
+        <span class="suburb">Carlton</span>
+        <span class="suburb">South Yarra</span>
+        <span class="suburb">Hawthorn</span>
+        <span class="suburb">Kew</span>
+        <span class="suburb">Collingwood</span>
+        <span class="suburb">Footscray</span>
+        <span class="suburb">Williamstown</span>
+        <span class="suburb">Brighton</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="sec-inner">
+    <h2>Why Choose Us?</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <h3>Experienced Team</h3>
+        <p style="color:var(--muted);margin-top:12px;">15+ years serving Melbourne. Licensed, qualified, and fully insured plumbers.</p>
+      </div>
+      
+      <div class="service-item">
+        <h3>Upfront Pricing</h3>
+        <p style="color:var(--muted);margin-top:12px;">No hidden fees. Fixed quotes before we start. You'll know exactly what you're paying.</p>
+      </div>
+      
+      <div class="service-item">
+        <h3>Quality Work</h3>
+        <p style="color:var(--muted);margin-top:12px;">We stand behind our work. All jobs come with a satisfaction guarantee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sec-inner">
+    <div class="contact-box">
+      <h2>Get a Free Quote</h2>
+      <p>Call us now for a free quote or to book a service. Emergency plumbing available 24/7.</p>
+      
+      <div class="contact-info">
+        <a href="tel:1300PLUMBER">📞 1300 PLUMBER</a>
+        <a href="mailto:info@melbourneplumbing.com.au">✉️ info@melbourneplumbing.com.au</a>
+      </div>
+      
+      <a href="index.html" class="btn">← Back to LaunchLocal</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Melbourne Plumbing Pros. This is a demo website created by LaunchLocal.<br/>
+  Lic #12345 | ABN 12 345 678 901
+</footer>
+
+</body>
+</html>
